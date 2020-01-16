@@ -37,12 +37,12 @@ public class GameManager : MonoBehaviour
         Player.PlayerPause();
     }
 
-    public void LoadScene(string name) {
-        SceneMove.Load(name);
-        StartCoroutine(ResetConf());
+    // 重置配置
+    public void ResetConf(float delay = .3f) {
+        StartCoroutine(_ResetConf(delay));
     }
 
-    private IEnumerator ResetConf(float delay = .3f) {
+    private IEnumerator _ResetConf(float delay) {
         yield return new WaitForSeconds(delay);
         isGameOver = false;
     }

@@ -34,6 +34,9 @@ public class SceneMove : MonoBehaviour {
     }
 
     public void Load(string sceneName = "") {
+        // 加载场景 需要重置 GameManager
+        GameManager.Instance.ResetConf();
+
         if (sceneName == "") {
             sceneName = DefaultNextScene;
         }

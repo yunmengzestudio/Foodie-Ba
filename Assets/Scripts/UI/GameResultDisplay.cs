@@ -31,10 +31,10 @@ public class GameResultDisplay : MonoBehaviour
         Title.text = Titles[index];
 
         ReplayBtn.onClick.AddListener(() => {
-            GameManager.Instance.LoadScene("Game");
+            GameManager.Instance.SceneMove.Load("Game");
         });
         HomeBtn.onClick.AddListener(() => {
-            GameManager.Instance.LoadScene("Home");
+            GameManager.Instance.SceneMove.Load("Home");
         });
 
         // 拿到最高等级进入彩蛋

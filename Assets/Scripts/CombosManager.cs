@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 public class CombosManager : MonoBehaviour
@@ -11,10 +12,13 @@ public class CombosManager : MonoBehaviour
     public Combos[] CombosList;
 
     private Dictionary<string, Combos> map = new Dictionary<string, Combos>();
+    private List<AudioSource> otherAudios;
 
 
     private void Start() {
         InitMap();
+        otherAudios = new List<AudioSource>(GetComponentsInChildren<AudioSource>());
+        otherAudios.Remove(CombosAudio);
     }
 
     private void InitMap() {
@@ -54,6 +58,18 @@ public class CombosManager : MonoBehaviour
         Stomach.Eat(combos.Bonus);
         CombosAudio.clip = combos.Clip;
         CombosAudio.Play();
+        StartCoroutine(TurnDownOtherAudios());
+    }
+
+    private IEnumerator TurnDownOtherAudios() {
+        foreach (AudioSource audio in otherAudios) {
+            audio.volume /= 4;
+        }
+        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(CombosAudio.clip.length - 0.1f);
+        foreach (AudioSource audio in otherAudios) {
+            audio.DOFade(audio.volume * 4, 0.1f);
+        }
     }
 
     private string CreateCombosKey(Food.FoodType[] foods, bool order = false) {
