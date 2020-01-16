@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f778606b5bbfa4d869e601ebbe00f2, type: 3}
-  m_Name: Baba
+  m_Script: {fileID: 11500000, guid: dec5745dcc1fc54419a2db15c5b40978, type: 3}
+  m_Name: DDB
   m_EditorClassIdentifier: 
-  Type: 0
-  Energy: -500
+  Foods: 010000000100000000000000
+  Bonus: 888
+  Order: 1
   Clip: {fileID: 0}
-  Sprite: {fileID: 21300000, guid: abd42a5ef1994a644a1942a80d90d304, type: 3}
-  MaxFallSpeed: 5
-  MinFallSpeed: 2

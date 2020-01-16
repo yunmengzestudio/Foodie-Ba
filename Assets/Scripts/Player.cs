@@ -14,4 +14,8 @@ public class Player : MonoBehaviour
         if (score > 0)
             Score += score;
     }
+
+    public void PlayerPause() {
+        gameObject.SetActive(false);
+    }
 }

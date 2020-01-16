@@ -6,14 +6,16 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class FoodDisplay : MonoBehaviour
 {
-    private Food food;
+    public Food food;
     public Food Food
     {
         get { return food; }
         set
         {
             food = value;
-            GetComponent<SpriteRenderer>().sprite = Food.Sprite;
+            GetComponent<SpriteRenderer>().sprite = food.Sprite;
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            rb.velocity = rb.velocity + new Vector2(0, -Food.BaseFallSpeed);
         }
     }
 

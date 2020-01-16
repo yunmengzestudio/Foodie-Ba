@@ -525,12 +525,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnInterval: 3
   AccelerateRatio: 0.05
-  MaxGravity: 4
-  FoodPrefab: {fileID: 1106649589113835861, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
-    type: 3}
-  Foods:
-  - {fileID: 11400000, guid: d4d96068abc26904c90f93cb439a8040, type: 2}
-  - {fileID: 11400000, guid: 171ff89e182311b48a583a23833e03cd, type: 2}
+  FallAccelerateRatio: 0.03
+  FoodPrefabs:
+  - {fileID: 1701034170507711080, guid: 1108eaaec85ab614baff17838c7dc56d, type: 3}
+  - {fileID: 7247617730845821072, guid: 2e54e7159520b6144a7a7724a0d4d34d, type: 3}
 --- !u!4 &1070822724
 Transform:
   m_ObjectHideFlags: 0
@@ -959,6 +957,17 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 446895309}
+    - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: CombosList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: CombosList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 28b9a17fdf32f414aa65247e8f3fde38,
+        type: 2}
     - target: {fileID: 7454393841616432604, guid: 53ef320f3d249e044b7a493f4f1e1b94,
         type: 3}
       propertyPath: m_Name

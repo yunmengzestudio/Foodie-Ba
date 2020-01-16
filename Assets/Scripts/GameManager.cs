@@ -28,9 +28,13 @@ public class GameManager : MonoBehaviour
         if (isGameOver)
             return;
         isGameOver = true;
+
         RectTransform rect = GameObject.Find("Canvas").GetComponent<RectTransform>();
         GameResultDisplay result = Instantiate(GameOverPanel, rect).GetComponent<GameResultDisplay>();
         result.Init(Player.Score);
+
+        // 游戏暂停
+        Player.PlayerPause();
     }
 
     public void LoadScene(string name) {
@@ -41,5 +45,15 @@ public class GameManager : MonoBehaviour
     private IEnumerator ResetConf(float delay = .3f) {
         yield return new WaitForSeconds(delay);
         isGameOver = false;
+    }
+
+    // 彩蛋
+    public void Bingo() {
+        StartCoroutine(_bingo());
+    }
+
+    private IEnumerator _bingo() {
+        yield return new WaitForSeconds(4f);
+        SceneMove.Load("Bingo");
     }
 }

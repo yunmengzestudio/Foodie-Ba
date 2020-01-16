@@ -8,5 +8,6 @@ public class Combos : ScriptableObject
 {
     public Food.FoodType[] Foods;
     public int Bonus;
+    public bool Order;
     public AudioClip Clip;
 }

@@ -36,5 +36,12 @@ public class GameResultDisplay : MonoBehaviour
         HomeBtn.onClick.AddListener(() => {
             GameManager.Instance.LoadScene("Home");
         });
+
+        // 拿到最高等级进入彩蛋
+        if (index == Scores.Length - 1) {
+            GameManager.Instance.Bingo();
+            ReplayBtn.enabled = false;
+            HomeBtn.enabled = false;
+        }
     }
 }

@@ -11,8 +11,10 @@ public class FoodTerminator : MonoBehaviour
 
     private Stomach Stomach;
     private CombosManager CombosManager;
+    private PlayerTouchMove PlayerMove;
 
     public AudioSource FoodAudio;
+    public AudioSource EatVomitAudio;
     public AudioClip EatClip;
     public AudioClip VomitClip;
 
@@ -25,7 +27,9 @@ public class FoodTerminator : MonoBehaviour
         animator = GetComponent<Animator>();
         Stomach = GetComponent<Stomach>();
         CombosManager = GetComponent<CombosManager>();
+        PlayerMove = GetComponent<PlayerTouchMove>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         // 正在呕吐或者
         if (isVomiting || collision.tag != "Food")
@@ -52,6 +56,10 @@ public class FoodTerminator : MonoBehaviour
         }
         Foods.Enqueue(food.Type);
 
+        // Audio 报食物名
+        FoodAudio.clip = food.Clip;
+        FoodAudio.Play();
+
         /// 检查是否包含组合技
         if (CombosManager.CheckCombo(Foods)) {
             // 队列清空
@@ -67,25 +75,27 @@ public class FoodTerminator : MonoBehaviour
             Stomach.Eat(food.Energy);
 
             // 声音反馈 -> 播放音效
-            if (FoodAudio.clip != EatClip || !FoodAudio.isPlaying) {
-                FoodAudio.clip = EatClip;
-                FoodAudio.Play();
+            if (EatVomitAudio.clip != EatClip || !EatVomitAudio.isPlaying) {
+                EatVomitAudio.clip = EatClip;
+                EatVomitAudio.Play();
             }
         }
     }
 
     private IEnumerator Vomit(float delay=0.3f) {
         isVomiting = true;
+        PlayerMove.enabled = false;
         yield return new WaitForSeconds(delay);
 
         // 动画机 -> start vomit
 
         // 声音反馈 -> 播放音效
-        FoodAudio.clip = VomitClip;
-        FoodAudio.Play();
+        EatVomitAudio.clip = VomitClip;
+        EatVomitAudio.Play();
         yield return new WaitForSeconds(VomitTime);
         // 动画机 -> stop vomit
 
+        PlayerMove.enabled = true;
         isVomiting = false;
     }
     

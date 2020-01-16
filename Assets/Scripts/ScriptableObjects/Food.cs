@@ -16,4 +16,6 @@ public class Food : ScriptableObject
     public int Energy;      // 能量 | 饱腹值
     public AudioClip Clip;  // 音效
     public Sprite Sprite;
+
+    public float BaseFallSpeed = 5f;
 }
