@@ -16,3 +16,4 @@ MonoBehaviour:
   Energy: 200
   Clip: {fileID: 0}
   Sprite: {fileID: 21300000, guid: f56ea7cf7789788438f4461e16f70dc4, type: 3}
+  BaseFallSpeed: 5

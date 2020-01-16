@@ -15,4 +15,4 @@ MonoBehaviour:
   Foods: 010000000100000000000000
   Bonus: 888
   Order: 1
-  Clip: {fileID: 0}
+  Clip: {fileID: 8300000, guid: d167914cb0bb92a47833f164b431bfbb, type: 3}
