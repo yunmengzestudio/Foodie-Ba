@@ -27,8 +27,11 @@ public class CombosManager : MonoBehaviour
         }
     }
 
-    public bool CheckCombo(Queue<Food.FoodType> foods) {
-        List<Food.FoodType> foodList = new List<Food.FoodType>(foods.ToArray());
+    public bool CheckCombo(Queue<Food> foods) {
+        List<Food.FoodType> foodList = new List<Food.FoodType>();
+        foreach(Food food in foods) {
+            foodList.Add(food.Type);
+        }
         return CheckCombo(foodList);
     }
 

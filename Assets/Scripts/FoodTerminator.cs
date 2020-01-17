@@ -13,12 +13,13 @@ public class FoodTerminator : MonoBehaviour
     private CombosManager CombosManager;
     private PlayerTouchMove PlayerMove;
 
+    public CombosPanel CombosPanel;
     public AudioSource FoodAudio;
     public AudioSource EatVomitAudio;
     public AudioClip EatClip;
     public AudioClip VomitClip;
 
-    private Queue<Food.FoodType> Foods = new Queue<Food.FoodType>();
+    private Queue<Food> Foods = new Queue<Food>();
     private Animator animator;
     private bool isVomiting;        // 呕吐ing
 
@@ -54,7 +55,8 @@ public class FoodTerminator : MonoBehaviour
         if (Foods.Count == MaxFoodCount) {
             Foods.Dequeue();
         }
-        Foods.Enqueue(food.Type);
+        Foods.Enqueue(food);
+        CombosPanel.Show(Foods.ToArray());
 
         // Audio 报食物名
         FoodAudio.clip = food.Clip;
@@ -64,6 +66,7 @@ public class FoodTerminator : MonoBehaviour
         if (CombosManager.CheckCombo(Foods)) {
             // 队列清空
             Foods.Clear();
+            CombosPanel.Show(Foods.ToArray());
 
             // 人物动画
 
