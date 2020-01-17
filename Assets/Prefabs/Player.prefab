@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 7454393841616432606}
   - component: {fileID: 7454393841616432605}
   - component: {fileID: 7454393841616432594}
+  - component: {fileID: 771111957376284456}
   - component: {fileID: 7454393841616432607}
   - component: {fileID: 7454393841616432592}
   - component: {fileID: 7454393841616432593}
@@ -363,7 +364,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 6fd7a73924ad9c94ca0bb4460401f13d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -391,15 +392,34 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.66, y: 1.675}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.15}
+  m_Size: {x: 0.53, y: 1.675}
   m_EdgeRadius: 0
+--- !u!95 &771111957376284456
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454393841616432604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f001751042570b2478fe9d724ff386c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7454393841616432607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxFoodCount: 5
   VomitTime: 2
+  CombosPanel: {fileID: 0}
   FoodAudio: {fileID: 2000485934333919161}
   EatVomitAudio: {fileID: 7403023627894609078}
   EatClip: {fileID: 0}
@@ -465,6 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stomach: {fileID: 7454393841616432592}
+  BulletCommenter: {fileID: 0}
   CombosAudio: {fileID: 8716965390514737636}
   CombosList:
   - {fileID: 11400000, guid: bc3e8265fa669f4439d0967954ea442f, type: 2}
@@ -480,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6c9caa1114f8a4da67efc1121a6301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreUI: {fileID: 0}
 --- !u!1 &8170002054406422474
 GameObject:
   m_ObjectHideFlags: 0

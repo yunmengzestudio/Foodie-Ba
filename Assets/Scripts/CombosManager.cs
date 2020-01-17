@@ -81,14 +81,20 @@ public class CombosManager : MonoBehaviour
     }
 
     private string CreateCombosKey(Food.FoodType[] foods, bool order = false) {
+        Food.FoodType[] newFoods;
         if (!order) {
-            Array.Sort(foods);
+            newFoods = (Food.FoodType[])foods.Clone();
+            Array.Sort(newFoods);
+        }
+        else {
+            newFoods = foods;
         }
 
         string key = "";
-        foreach (Food.FoodType type in foods) {
+        foreach (Food.FoodType type in newFoods) {
             key += type.ToString();
         }
+        Debug.Log(key);
         return key;
     }
 }

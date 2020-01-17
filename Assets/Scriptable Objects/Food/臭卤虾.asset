@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f778606b5bbfa4d869e601ebbe00f2, type: 3}
+  m_Name: "\u81ED\u5364\u867E"
+  m_EditorClassIdentifier: 
+  Type: 7
+  Energy: 80
+  Clip: {fileID: 8300000, guid: ad2c196ff7f9d8f4994c17209927bc7f, type: 3}
+  Sprite: {fileID: 21300000, guid: e85a910a9c7b37045b5504cc53f4a418, type: 3}
+  BaseFallSpeed: 5

@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
             return;
         isGameOver = true;
 
-        RectTransform rect = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        RectTransform rect = GameObject.Find("/Canvas").GetComponent<RectTransform>();
         GameResultDisplay result = Instantiate(GameOverPanel, rect).GetComponent<GameResultDisplay>();
         result.Init(Player.Score);
 

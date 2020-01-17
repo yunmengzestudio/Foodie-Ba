@@ -9,7 +9,17 @@ public class Food : ScriptableObject
     public enum FoodType
     {
         Baba,
-        Dofu
+        DaSuan,
+        XiaoHanBao,
+        BaYa,
+        NingMeng,
+        HuoLongGuo,
+        FuRu,
+        ChouLuXia,
+        ChouDouFu,
+        XiangJiao,
+        HuangGua,
+        JiPiGu
     };
 
     public FoodType Type;

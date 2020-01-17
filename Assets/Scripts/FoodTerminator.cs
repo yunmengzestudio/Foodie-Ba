@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class FoodTerminator : MonoBehaviour
 {
     public int MaxFoodCount = 5;    // 组合技最大数量
-    public float VomitTime = 2f;    // 呕吐时间
+    public float VomitTime = 3f;    // 呕吐时间
 
     private Stomach Stomach;
     private CombosManager CombosManager;
@@ -41,6 +41,7 @@ public class FoodTerminator : MonoBehaviour
         
         // 人物动画 + UI 反馈 + 声音反馈
         EatFood(food);
+        animator.SetTrigger("Eat");
 
         // 呕吐 <- 不可吃食物
         if (food.Type == Food.FoodType.Baba) {
@@ -86,17 +87,20 @@ public class FoodTerminator : MonoBehaviour
     }
 
     private IEnumerator Vomit(float delay=0.3f) {
+        // 动画机 -> start vomit
+        animator.SetBool("IsVomiting", true);
+
         isVomiting = true;
         PlayerMove.enabled = false;
         yield return new WaitForSeconds(delay);
-
-        // 动画机 -> start vomit
 
         // 声音反馈 -> 播放音效
         EatVomitAudio.clip = VomitClip;
         EatVomitAudio.Play();
         yield return new WaitForSeconds(VomitTime);
+        
         // 动画机 -> stop vomit
+        animator.SetBool("IsVomiting", false);
 
         PlayerMove.enabled = true;
         isVomiting = false;
