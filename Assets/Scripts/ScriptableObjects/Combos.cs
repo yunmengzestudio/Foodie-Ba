@@ -10,4 +10,5 @@ public class Combos : ScriptableObject
     public int Bonus;
     public bool Order;
     public AudioClip Clip;
+    public string BulletComment;
 }

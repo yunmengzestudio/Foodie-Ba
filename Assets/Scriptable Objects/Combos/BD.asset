@@ -16,3 +16,4 @@ MonoBehaviour:
   Bonus: 666
   Order: 0
   Clip: {fileID: 8300000, guid: ff9bfc4f520c191468470182b5d53492, type: 3}
+  BulletComment: "\u81ED\u8C46\u8150\u914D\u8150\u4E73\uFF0C\u7F8E\u98DF\u754C\u4E2D\u7684\u535A\u4E3B"

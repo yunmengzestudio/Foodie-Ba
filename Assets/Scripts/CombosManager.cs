@@ -8,6 +8,7 @@ using DG.Tweening;
 public class CombosManager : MonoBehaviour
 {
     public Stomach Stomach;
+    public BulletCommenter BulletCommenter;
     public AudioSource CombosAudio;
     public Combos[] CombosList;
 
@@ -58,7 +59,11 @@ public class CombosManager : MonoBehaviour
     }
 
     private void CombosEffect(Combos combos) {
+        // 加饱腹值 得分
         Stomach.Eat(combos.Bonus);
+        // 发送弹幕
+        BulletCommenter.Shoot(combos.BulletComment);
+        // 播放音频
         CombosAudio.clip = combos.Clip;
         CombosAudio.Play();
         StartCoroutine(TurnDownOtherAudios());
