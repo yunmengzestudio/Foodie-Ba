@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dec5745dcc1fc54419a2db15c5b40978, type: 3}
-  m_Name: 3
+  m_Name: 5
   m_EditorClassIdentifier: 
-  Foods: 06000000080000000a000000
-  Bonus: 199
+  Foods: 0b00000001000000
+  Bonus: 500
   Order: 0
-  Clip: {fileID: 8300000, guid: ead93c8e881160d489dfbbba2fd091ba, type: 3}
-  BulletComment: "\u81ED\u8C46\u8150\u8150\u4E73\u9EC4\u74DC\u4E1D\uFF0C\u5403\u5230\u5634\u91CC\u7F8E\u6C41\u6C41"
+  Clip: {fileID: 8300000, guid: e2936746a238e114fa9c8458ee142a5b, type: 3}
+  BulletComment: "\u9E21\u5C41\u80A1\u914D\u5927\u849C\uFF0C\u7B80\u7B80\u5355\u5355\u4E00\u987F\u996D\uFF01"

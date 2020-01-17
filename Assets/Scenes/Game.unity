@@ -234,7 +234,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d50bef7ea110002408dd5423bef3c7d7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1041,9 +1041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60549c97a32744f4ea71cbff38c2789c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnInterval: 3
-  AccelerateRatio: 0.05
-  FallAccelerateRatio: 0.03
+  SpawnInterval: 1.5
+  AccelerateRatio: 0.0403
+  FallAccelerateRatio: 0.0403
   FoodPrefabs:
   - {fileID: 1701034170507711080, guid: 1108eaaec85ab614baff17838c7dc56d, type: 3}
   - {fileID: 4853376187069551204, guid: 144d16a2f75a7284bb4c30a07c0f6b9b, type: 3}
@@ -1057,6 +1057,55 @@ MonoBehaviour:
   - {fileID: 2232513596855591657, guid: 166adaf43b28dbf47af0d250fee1ba76, type: 3}
   - {fileID: 4159442493422577242, guid: dc6a14194404c484688b4bdda7cd916a, type: 3}
   - {fileID: 1265196369141457336, guid: 1ed36f25b64c9254782e34b2e4a82f58, type: 3}
+  FoodInfos:
+  - FoodPrefab: {fileID: 1701034170507711080, guid: 1108eaaec85ab614baff17838c7dc56d,
+      type: 3}
+    RangeMin: 0
+    RangeMax: 25
+  - FoodPrefab: {fileID: 6492056820483458361, guid: 145d50e30ea89c34caf3eb01f9858a8e,
+      type: 3}
+    RangeMin: 25
+    RangeMax: 30
+  - FoodPrefab: {fileID: 2522028619308453578, guid: b7f3c4c32e0d30e4caba7fbc51af80b9,
+      type: 3}
+    RangeMin: 30
+    RangeMax: 45
+  - FoodPrefab: {fileID: 8703726304712215971, guid: 443031a9d01b6eb4782a7512c2afeb7b,
+      type: 3}
+    RangeMin: 45
+    RangeMax: 55
+  - FoodPrefab: {fileID: 4159442493422577242, guid: dc6a14194404c484688b4bdda7cd916a,
+      type: 3}
+    RangeMin: 55
+    RangeMax: 60
+  - FoodPrefab: {fileID: 6956184553340609784, guid: 033f2d08b244dcd49bb04f6c96725e37,
+      type: 3}
+    RangeMin: 60
+    RangeMax: 65
+  - FoodPrefab: {fileID: 2232513596855591657, guid: 166adaf43b28dbf47af0d250fee1ba76,
+      type: 3}
+    RangeMin: 65
+    RangeMax: 75
+  - FoodPrefab: {fileID: 8800043266779721475, guid: aa49b5acc012de7448fa5f485513d056,
+      type: 3}
+    RangeMin: 75
+    RangeMax: 85
+  - FoodPrefab: {fileID: 4558268518910119264, guid: a3bd51091086bd6429848a43067b0933,
+      type: 3}
+    RangeMin: 85
+    RangeMax: 90
+  - FoodPrefab: {fileID: 4853376187069551204, guid: 144d16a2f75a7284bb4c30a07c0f6b9b,
+      type: 3}
+    RangeMin: 90
+    RangeMax: 93
+  - FoodPrefab: {fileID: 1265196369141457336, guid: 1ed36f25b64c9254782e34b2e4a82f58,
+      type: 3}
+    RangeMin: 93
+    RangeMax: 94
+  - FoodPrefab: {fileID: 1265196369141457336, guid: 1ed36f25b64c9254782e34b2e4a82f58,
+      type: 3}
+    RangeMin: 97
+    RangeMax: 100
 --- !u!4 &1070822724
 Transform:
   m_ObjectHideFlags: 0
@@ -2052,7 +2101,7 @@ PrefabInstance:
     - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
         type: 3}
       propertyPath: CombosList.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
         type: 3}
@@ -2076,6 +2125,30 @@ PrefabInstance:
       propertyPath: CombosList.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 841fe7c10731cbf468c2ca6d52860f05,
+        type: 2}
+    - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: CombosList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: e6a6b0a96eed3af4e97f2e7ba3ae9f71,
+        type: 2}
+    - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: CombosList.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: cf3d054755c45784e88b4fd0f0e55afb,
+        type: 2}
+    - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: CombosList.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: cfeeb14e7333e36488f44908e78c1a37,
+        type: 2}
+    - target: {fileID: 7454393841616432596, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: CombosList.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 930835d9305598148a10bc8679c41272,
         type: 2}
     - target: {fileID: 7454393841616432604, guid: 53ef320f3d249e044b7a493f4f1e1b94,
         type: 3}

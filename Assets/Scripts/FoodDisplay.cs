@@ -16,6 +16,7 @@ public class FoodDisplay : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = food.Sprite;
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             rb.velocity = rb.velocity + new Vector2(0, -Food.BaseFallSpeed);
+            rb.AddTorque(Random.Range(-90, 90));
         }
     }
 

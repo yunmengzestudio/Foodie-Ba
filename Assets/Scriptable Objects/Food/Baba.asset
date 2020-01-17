@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baba
   m_EditorClassIdentifier: 
   Type: 0
-  Energy: -500
+  Energy: -300
   Clip: {fileID: 0}
   Sprite: {fileID: 21300000, guid: 85cfe4cc9f294c44d8e8edd7b4ad30f1, type: 3}
   BaseFallSpeed: 5

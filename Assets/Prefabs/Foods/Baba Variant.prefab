@@ -149,6 +149,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1106649589113835859, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106649589113835859, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1106649589113835860, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
         type: 3}
       propertyPath: food

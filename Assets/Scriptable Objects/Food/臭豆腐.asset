@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "\u81ED\u8C46\u8150"
   m_EditorClassIdentifier: 
   Type: 8
-  Energy: 90
+  Energy: 30
   Clip: {fileID: 8300000, guid: 7cea9a08b997dc842af49c5b3b532283, type: 3}
   Sprite: {fileID: 21300000, guid: ce37d16315fec9b4098894a2aeb211fb, type: 3}
   BaseFallSpeed: 5

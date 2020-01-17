@@ -39,7 +39,7 @@ public class CombosManager : MonoBehaviour
     public bool CheckCombo(List<Food.FoodType> foods) {
         int len = foods.Count - 1;
 
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i <= len; i++) {
             string unorderedKey = CreateCombosKey(foods.ToArray(), false);
             string orderedKey = CreateCombosKey(foods.ToArray(), true);
 

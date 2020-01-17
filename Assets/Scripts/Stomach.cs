@@ -25,12 +25,12 @@ public class Stomach : MonoBehaviour
 
     private void Start() {
         energy = MaxEnergy / 2;
-        canvasRect = GameObject.Find("Canvas").GetComponent<RectTransform>();
+        canvasRect = GameObject.Find("/Canvas").GetComponent<RectTransform>();
     }
 
     private void Update() {
         energy -= Time.deltaTime * HungrySpeed;
-        HungrySpeed += Time.deltaTime * 0.1f;
+        HungrySpeed += Time.deltaTime * 1f;
     }
 
     private void FixedUpdate() {

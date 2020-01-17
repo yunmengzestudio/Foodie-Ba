@@ -140,6 +140,11 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1106649589113835859, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1106649589113835860, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
         type: 3}
       propertyPath: food
@@ -149,7 +154,7 @@ PrefabInstance:
     - target: {fileID: 1106649589113835861, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa,
         type: 3}
       propertyPath: m_Name
-      value: XiaoHanBao
+      value: XiaoHanBao Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf044cbcec11ac48b5d6fa87b4eeafa, type: 3}
