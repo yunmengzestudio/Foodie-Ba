@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.Events;
 
+
+/// <summary>
+/// 管理两个 UI: 饱腹值 Slider 和得分文字效果显示
+/// </summary>
 public class Stomach : MonoBehaviour
 {
     public Slider Slider;
@@ -17,7 +21,12 @@ public class Stomach : MonoBehaviour
     public float Duration = 0.35f;
     public Ease UpEase = Ease.OutElastic;
     public Ease FadeEase = Ease.OutElastic;
-    
+
+    public int MinFontSize = 50;
+    public int MaxFontSize = 300;
+    public int MinScoreBound = 40;  // 若小于等于 MinScoreBound 则取最小字号
+    public int MaxScoreBound = 200;  // 若大于等于 MaxScoreBound 则取最大字号
+
 
     private float energy;
     private bool hasStarved = false;
@@ -52,6 +61,8 @@ public class Stomach : MonoBehaviour
         GameObject go = Instantiate(EnergyTextPrefab, canvasRect);
 
         Text text = go.GetComponent<Text>();
+        text.fontSize = GetFontSize(energy);
+        Debug.Log(text.fontSize);
         text.text = (energy > 0 ? "+" : "") + energy.ToString();
         text.DOFade(0, Duration).SetEase(FadeEase);
 
@@ -73,5 +84,19 @@ public class Stomach : MonoBehaviour
             null, 
             out retPos);
         return retPos;
+    }
+
+    private int GetFontSize(int energy) {
+        energy = Mathf.Abs(energy);
+        if (energy <= MinScoreBound) {
+            return MinFontSize;
+        }
+        else if (energy >= MaxScoreBound) {
+            return MaxFontSize;
+        }
+        else {
+            float ratio = (float)(energy - MinScoreBound) / (MaxScoreBound - MinScoreBound); 
+            return (int)(MinFontSize + ratio * (MaxFontSize - MinFontSize));
+        }
     }
 }

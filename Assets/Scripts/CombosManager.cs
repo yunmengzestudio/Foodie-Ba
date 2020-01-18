@@ -94,7 +94,6 @@ public class CombosManager : MonoBehaviour
         foreach (Food.FoodType type in newFoods) {
             key += type.ToString();
         }
-        Debug.Log(key);
         return key;
     }
 }

@@ -23,6 +23,9 @@ public class FoodSpawner : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(pos);
         transform.position = new Vector2(0, pos.y + 1);
         halfWidth = pos.x;
+
+        // OnGameOver 事件注册 -> 关闭 FoodSpawner
+        GameManager.Instance.OnGameOver.AddListener(() => gameObject.SetActive(false));
     }
 
     private void FixedUpdate() {

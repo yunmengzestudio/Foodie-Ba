@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverPanel;
     public Player Player;
     public SceneMove SceneMove;
+    public UnityEvent OnGameOver;
 
     [SerializeField]
     private bool isGameOver = false;
@@ -35,6 +37,9 @@ public class GameManager : MonoBehaviour
 
         // 游戏暂停
         Player.PlayerPause();
+        // OnGameOver 事件触发
+        OnGameOver?.Invoke();
+        OnGameOver.RemoveAllListeners();
     }
 
     // 重置配置
@@ -55,5 +60,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator _bingo() {
         yield return new WaitForSeconds(4f);
         SceneMove.Load("Bingo");
+        PlayerPrefs.SetInt("HasBingo", 1);
+        PlayerPrefs.Save();
     }
 }

@@ -38,7 +38,7 @@ public class GameResultDisplay : MonoBehaviour
         });
 
         // 拿到最高等级进入彩蛋
-        if (index == Scores.Length - 1) {
+        if (index == Scores.Length - 1 && !PlayerPrefs.HasKey("HasBingo")) {
             GameManager.Instance.Bingo();
             ReplayBtn.enabled = false;
             HomeBtn.enabled = false;

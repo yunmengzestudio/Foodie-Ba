@@ -1044,19 +1044,6 @@ MonoBehaviour:
   SpawnInterval: 1.5
   AccelerateRatio: 0.0403
   FallAccelerateRatio: 0.0403
-  FoodPrefabs:
-  - {fileID: 1701034170507711080, guid: 1108eaaec85ab614baff17838c7dc56d, type: 3}
-  - {fileID: 4853376187069551204, guid: 144d16a2f75a7284bb4c30a07c0f6b9b, type: 3}
-  - {fileID: 2522028619308453578, guid: b7f3c4c32e0d30e4caba7fbc51af80b9, type: 3}
-  - {fileID: 9222054672687576206, guid: 2d0892c8530809f41a73a0cd5b1ac016, type: 3}
-  - {fileID: 8800043266779721475, guid: aa49b5acc012de7448fa5f485513d056, type: 3}
-  - {fileID: 8703726304712215971, guid: 443031a9d01b6eb4782a7512c2afeb7b, type: 3}
-  - {fileID: 6492056820483458361, guid: 145d50e30ea89c34caf3eb01f9858a8e, type: 3}
-  - {fileID: 6956184553340609784, guid: 033f2d08b244dcd49bb04f6c96725e37, type: 3}
-  - {fileID: 4558268518910119264, guid: a3bd51091086bd6429848a43067b0933, type: 3}
-  - {fileID: 2232513596855591657, guid: 166adaf43b28dbf47af0d250fee1ba76, type: 3}
-  - {fileID: 4159442493422577242, guid: dc6a14194404c484688b4bdda7cd916a, type: 3}
-  - {fileID: 1265196369141457336, guid: 1ed36f25b64c9254782e34b2e4a82f58, type: 3}
   FoodInfos:
   - FoodPrefab: {fileID: 1701034170507711080, guid: 1108eaaec85ab614baff17838c7dc56d,
       type: 3}
@@ -2083,6 +2070,31 @@ PrefabInstance:
       propertyPath: Slider
       value: 
       objectReference: {fileID: 446895309}
+    - target: {fileID: 7454393841616432592, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: MinScoreBound
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454393841616432592, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: MaxScoreBound
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454393841616432592, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: MinFontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454393841616432592, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: MaxFontSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454393841616432592, guid: 53ef320f3d249e044b7a493f4f1e1b94,
+        type: 3}
+      propertyPath: UpDistance
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7454393841616432593, guid: 53ef320f3d249e044b7a493f4f1e1b94,
         type: 3}
       propertyPath: EatClip
