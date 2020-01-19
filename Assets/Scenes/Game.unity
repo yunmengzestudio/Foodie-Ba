@@ -1085,7 +1085,7 @@ MonoBehaviour:
       type: 3}
     RangeMin: 90
     RangeMax: 93
-  - FoodPrefab: {fileID: 1265196369141457336, guid: 1ed36f25b64c9254782e34b2e4a82f58,
+  - FoodPrefab: {fileID: 9222054672687576206, guid: 2d0892c8530809f41a73a0cd5b1ac016,
       type: 3}
     RangeMin: 93
     RangeMax: 94

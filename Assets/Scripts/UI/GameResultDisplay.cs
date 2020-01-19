@@ -11,7 +11,7 @@ public class GameResultDisplay : MonoBehaviour
     public Button ReplayBtn;
     public Button HomeBtn;
 
-    public static int[] Scores = new int[] { 1000, 2000, 5000 };
+    public static int[] Scores = new int[] { 1000, 2000, 6000 };
     public static string[] Titles = new string[] { "小吃播", "当红吃播", "全国美食家" };
 
 
