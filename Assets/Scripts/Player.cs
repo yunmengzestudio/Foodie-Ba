@@ -12,10 +12,8 @@ public class Player : MonoBehaviour
     }
 
     public void AddScore(int score) {
-        if (score > 0) {
-            Score += score;
-            ScoreUI.SetScore(Score);
-        }
+        Score += score;
+        ScoreUI.SetScore(Score);
     }
 
     public void PlayerPause() {

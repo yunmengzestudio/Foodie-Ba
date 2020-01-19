@@ -16,16 +16,20 @@ public class ScoreUI : MonoBehaviour
 
     private void Update() {
         if ((int)score != Score) {
-            score += speed * Time.deltaTime;
-            if (score >= Score) {
+            if (score < Score)
+                score += speed * Time.deltaTime;
+            else
+                score -= speed * Time.deltaTime;
+
+            if (Mathf.Abs(score - Score) < speed * Time.deltaTime)
                 score = Score;
-            }
+
             ScoreText.text = ((int)score).ToString();
         }
     }
 
     public void SetScore(int score) {
         Score = score;
-        speed = (Score - this.score) / SmoothTime;
+        speed = Mathf.Abs(Score - this.score) / SmoothTime;
     }
 }
