@@ -246,7 +246,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ef01329e7c0bb5541a1368a6d524bb94, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1180,7 +1180,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -1200}
-  m_SizeDelta: {x: 0, y: 600}
+  m_SizeDelta: {x: 0, y: 914.8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1722073016
 MonoBehaviour:
@@ -1202,10 +1202,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 145
+    m_FontSize: 140
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 148
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1213,9 +1213,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'XXX : XXX
-
-    X  X : X  X'
+  m_Text: "\u611F\u8C22\u6E38\u73A9~\n\n\u7B56\u5212\uFF1Ajoker\n\u7A0B\u5E8F\uFF1Anuso\n\u7F8E\u672F\uFF1A\u52A0\u53F7 "
 --- !u!222 &1722073017
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec5745dcc1fc54419a2db15c5b40978, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  Foods: 06000000
+  Foods: 0600000008000000
   Bonus: 166
   Order: 0
   Clip: {fileID: 8300000, guid: ff9bfc4f520c191468470182b5d53492, type: 3}
