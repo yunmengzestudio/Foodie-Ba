@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   Foods: 0b00000001000000
-  Bonus: 500
+  Bonus: 233
   Order: 0
   Clip: {fileID: 8300000, guid: e2936746a238e114fa9c8458ee142a5b, type: 3}
   BulletComment: "\u9E21\u5C41\u80A1\u914D\u5927\u849C\uFF0C\u7B80\u7B80\u5355\u5355\u4E00\u987F\u996D\uFF01"

@@ -21,4 +21,12 @@ public class Player : MonoBehaviour
     public void PlayerPause() {
         gameObject.SetActive(false);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+    }
 }
