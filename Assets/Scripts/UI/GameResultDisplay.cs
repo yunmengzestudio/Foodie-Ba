@@ -10,9 +10,11 @@ public class GameResultDisplay : MonoBehaviour
     public Text Score;
     public Button ReplayBtn;
     public Button HomeBtn;
+    public AudioSource Audio;
 
     public static int[] Scores = new int[] { 1000, 3000, 6000 };
     public static string[] Titles = new string[] { "小吃播", "当红吃播", "全国美食家" };
+    public AudioClip[] Clips;
 
 
     public void Init(int score) {
@@ -32,6 +34,8 @@ public class GameResultDisplay : MonoBehaviour
 
         Score.text = score.ToString();
         Title.text = Titles[index];
+        Audio.clip = Clips[index];
+        Audio.Play();
 
         ReplayBtn.onClick.AddListener(() => {
             GameManager.Instance.SceneMove.Load("Game");
