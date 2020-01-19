@@ -109,10 +109,10 @@ public class FoodTerminator : MonoBehaviour
     private void Update()
     {
         //测试用
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    Stomach.Eat(500);
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Stomach.Eat(500);
+        }
     }
 
 }
