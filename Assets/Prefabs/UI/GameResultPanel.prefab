@@ -94,9 +94,9 @@ MonoBehaviour:
   HomeBtn: {fileID: 5384544382431515854}
   Audio: {fileID: 3277928527029118374}
   Clips:
-  - {fileID: 8300000, guid: 27740bbcaa9e8294c907752d5cebff4b, type: 3}
-  - {fileID: 8300000, guid: d167914cb0bb92a47833f164b431bfbb, type: 3}
-  - {fileID: 8300000, guid: 27740bbcaa9e8294c907752d5cebff4b, type: 3}
+  - {fileID: 8300000, guid: d8f2b49014a97224193485b3309a0693, type: 3}
+  - {fileID: 8300000, guid: c5041bc57ab76264b80ca20ac3a54336, type: 3}
+  - {fileID: 8300000, guid: da7c12dce3136434f8d5b5bceba8d484, type: 3}
 --- !u!82 &3277928527029118374
 AudioSource:
   m_ObjectHideFlags: 0
